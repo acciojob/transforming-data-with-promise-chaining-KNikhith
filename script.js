@@ -17,12 +17,12 @@ btn.addEventListener("click",()=>{
 			setTimeout(()=>{
 				output.textContent=`Result: ${input}`;
 				resolve(input);
-			},2000)
+			},1000)
 		})
 	})
 	.then((val)=>{
 		return new Promise((resolve,reject)=>{
-			input -=2;
+			input -=3;
 			setTimeout(()=>{
 				output.textContent=`Result: ${input}`;
 				resolve(input);
