@@ -24,7 +24,7 @@ btn.addEventListener("click",()=>{
 		return new Promise((resolve,reject)=>{
 			input -=2;
 			setTimeout(()=>{
-				output.textContent=`Result ${input}`;
+				output.textContent=`Result: ${input}`;
 				resolve(input);
 			},1000)
 		})
