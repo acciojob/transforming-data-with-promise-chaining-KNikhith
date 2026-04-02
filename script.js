@@ -5,37 +5,38 @@ let btn=document.getElementById("btn");
 btn.addEventListener("click",()=>{
 	let input=Number(document.getElementById("ip").value);
 
-	new Promise((res,rej)=>{
+	new Promise((resolve,reject)=>{
 		setTimeout(()=>{
 			output.textContent=`Result ${input}`;
-			res(input);
+			resolve(input);
 		},2000);
 	})
-	.then((res,rej)=>{
+	.then((resolve,reject)=>{
 		input *=2;
 		setTimeout(()=>{
 			output.textContent=`Result ${input}`;
-			res(input);
+			resolve(input);
 		},2000);
 	})
-	.then((res,rej)=>{
+	.then((resolve,reject)=>{
 		input -=2;
 		setTimeout(()=>{
 			output.textContent=`Result ${input}`;
-			res(input);
+			resolve(input);
 		},1000);
 	})
-	.then((res,rej)=>{
+	.then((resolve,reject)=>{
 		input /=2;
 		setTimeout(()=>{
 			output.textContent=`Result ${input}`;
-			res(input);
+			resolve(input);
 		},1000);
 	})
-	.then((res,rej)=>{
+	.then((resolve,reject)=>{
 		input +=10;
 		setTimeout(()=>{
-			output.textContent=`Final Result ${input}`
+			output.textContent=`Final Result ${input}`;
+			resolve(input);
 		},1000)
 	})
 	.catch((err)=>console.log(err));
